@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { FiStar, FiChevronLeft, FiChevronRight } from 'react-icons/fi'
+import { FiStar } from 'react-icons/fi'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -88,6 +88,21 @@ export default function Testimonials() {
     return () => clearInterval(interval)
   }, [current])
 
+  const touchStartX = useRef(null)
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX
+  }
+
+  const handleTouchEnd = (e) => {
+    if (touchStartX.current === null) return
+    const diff = touchStartX.current - e.changedTouches[0].clientX
+    if (Math.abs(diff) > 50) {
+      diff > 0 ? next() : prev()
+    }
+    touchStartX.current = null
+  }
+
   const t = testimonials[current]
 
   return (
@@ -108,7 +123,7 @@ export default function Testimonials() {
         </div>
 
         {/* Main card */}
-        <div ref={cardRef} className="relative">
+        <div ref={cardRef} className="relative" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
           <div className="bg-white rounded-sm p-8 md:p-12 shadow-sm" style={{ border: '1px solid rgba(201,169,110,0.15)' }}>
             {/* Quote */}
             <div className="font-display text-7xl leading-none mb-4" style={{ color: 'var(--gold)', opacity: 0.3 }}>"</div>
@@ -139,8 +154,8 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Controls */}
-        <div className="flex items-center justify-between mt-8">
+        {/* Controls — dots centered only */}
+        <div className="flex items-center justify-center mt-8">
           <div className="flex gap-2">
             {testimonials.map((_, i) => (
               <button
@@ -154,22 +169,6 @@ export default function Testimonials() {
                 }}
               />
             ))}
-          </div>
-          <div className="flex gap-3">
-            <button
-              onClick={prev}
-              className="w-11 h-11 rounded-full border flex items-center justify-center transition-all duration-300 hover:bg-[#C9A96E] hover:border-[#C9A96E] hover:text-white group"
-              style={{ borderColor: 'rgba(201,169,110,0.4)', color: 'var(--gold)' }}
-            >
-              <FiChevronLeft size={18} />
-            </button>
-            <button
-              onClick={next}
-              className="w-11 h-11 rounded-full border flex items-center justify-center transition-all duration-300 hover:bg-[#C9A96E] hover:border-[#C9A96E] hover:text-white"
-              style={{ borderColor: 'rgba(201,169,110,0.4)', color: 'var(--gold)' }}
-            >
-              <FiChevronRight size={18} />
-            </button>
           </div>
         </div>
 
