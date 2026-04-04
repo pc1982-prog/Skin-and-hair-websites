@@ -44,10 +44,10 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               {[
-                { icon: FiTwitter, href: 'https://twitter.com/Practo', label: 'Twitter' },
-                { icon: FiFacebook, href: 'https://www.facebook.com/practo', label: 'Facebook' },
-                { icon: FiLinkedin, href: 'https://www.linkedin.com/company/practo-technologies-pvt-ltd', label: 'Linkedin' },
-                { icon: FiYoutube, href: 'https://www.youtube.com/user/PractoSupport', label: 'YouTube' },
+                { icon: FiTwitter, href: 'https://twitter.com/dermaclinixdl', label: 'Twitter' },
+                { icon: FiFacebook, href: 'https://www.youtube.com/@DERMACLINIXDELHI', label: 'Facebook' },
+                { icon: FiInstagram, href: 'https://twitter.com/dermaclinixdl', label: 'Instagram' },
+                { icon: FiYoutube, href: 'https://www.youtube.com/@DERMACLINIXDELHI', label: 'YouTube' },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
@@ -117,7 +117,7 @@ export default function Footer() {
               <div className="flex gap-3 items-center">
                 <FiPhone size={14} style={{ color: 'var(--gold)' }} />
                 <a href="tel:+911234567890" className="text-white/60 text-sm hover:text-[#C9A96E] transition-colors">
-                  +91 12345 67890
+                +91 8882227080
                 </a>
               </div>
               <div className="flex gap-3 items-center">

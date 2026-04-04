@@ -13,6 +13,12 @@
   --font-display: 'Cormorant Garamond', serif;
   --font-body: 'DM Sans', sans-serif;
 }
+.elfsight-app-ddc7c118-6c5d-4ded-9fc4-a29c1c887025 
+  + div, 
+[class*="elfsight"] a[href*="elfsight"],
+.eapps-widget-toolbar {
+  display: none !important;
+}
 
 /* * {
   margin: 0;

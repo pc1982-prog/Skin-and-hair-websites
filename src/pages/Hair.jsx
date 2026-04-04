@@ -141,7 +141,7 @@ export default function Hair() {
                       </div>
                     ))}
                   </div>
-                  <Link to="/contact" className="btn-gold inline-flex mt-8">
+                  <Link to="https://www.practo.com/delhi/doctor/dr-amrendra-kumar-dermatologist-cosmetologist/info?practice_id=1029827&specialization=Dermatologist&referrer=doctor_listing&utm_source=opd_google_dsa&utm_medium=102203724469&utm_campaign=10191299917&sem=true" className="btn-gold inline-flex mt-8">
                     Book Consultation <FiArrowRight size={13} />
                   </Link>
                 </div>

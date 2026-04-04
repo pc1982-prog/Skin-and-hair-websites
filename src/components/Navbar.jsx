@@ -147,7 +147,7 @@ export default function Navbar() {
           {/* CTA + Hamburger */}
           <div className="flex items-center gap-2">
             <a
-              href="tel:+911234567890"
+              href="tel:  +91 8882227080"
               className="flex items-center gap-1.5 btn-gold mr-1"
               style={isDesktop
                 ? { fontSize: '0.75rem', padding: '10px 20px', letterSpacing: '0.1em' }
@@ -228,13 +228,13 @@ export default function Navbar() {
             ))}
           </div>
           <div className="mt-8">
-            <a href="tel:+911234567890" className="btn-gold-solid w-full justify-center text-xs py-3">
+            <a href="tel:  +91 8882227080" className="btn-gold-solid w-full justify-center text-xs py-3">
               <FiPhone size={13} /> Book Appointment
             </a>
           </div>
           <div className="mt-8 pt-8 border-t border-white/10">
             <p className="text-white/40 text-xs tracking-widest uppercase">Defence Colony, Delhi</p>
-            <p className="text-[#C9A96E] text-sm mt-1">+91 12345 67890</p>
+            <p className="text-[#C9A96E] text-sm mt-1">+91 8882227080</p>
           </div>
         </div>
       </div>

@@ -160,7 +160,7 @@ export default function WhyUs() {
           <div className="relative">
             <div className="absolute -top-3 -left-3 w-full h-full border border-[#C9A96E]/20" />
             <img
-              src="https://images.unsplash.com/photo-1629909615957-be38d48fbbe4?w=800&q=80"
+              src="https://www.dermaclinix.in/images/why-us-img1.png"
               alt="Clinic interior"
               className="w-full rounded-sm relative z-10 aspect-[4/3] object-cover"
             />

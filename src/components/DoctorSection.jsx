@@ -60,7 +60,7 @@ export default function DoctorSection() {
               <div className="absolute -top-4 -left-4 w-full h-full border border-[#C9A96E]/20 rounded-sm" />
               <div className="relative overflow-hidden rounded-sm">
                 <img
-                  src="https://imagesx.practo.com/providers/dr-amrendra-kumar-dermatologist-delhi-0546832f-f424-4f5c-8ae3-51349668388b.jpg?i_type=t_70x70"
+                  src="https://www.dermaclinix.in/team/img/Dr._Amrendra_Kumar.webp"
                   alt="Dr. Amrendra Kumar"
                   className="w-full aspect-[6/5] object-cover"
                   style={{ objectPosition: 'center top' }}

@@ -1,41 +1,144 @@
 import React from "react"
-import  PageHero from '../../components/PageHero'
+import PageHero from '../../components/PageHero'
 import CTABanner from '../../components/CTABanner'
 import { FiLinkedin, FiMail } from 'react-icons/fi'
 
 const team = [
   {
     name: 'Dr. Amrendra Kumar',
-    role: 'Director & Founder',
+    role: 'Director & Co-Founder',
     specialty: 'Hair Transplant Surgeon · Dermatologist',
-    image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80',
+    image: 'https://www.dermaclinix.in/team/img/Dr._Amrendra_Kumar.webp',
     qual: 'MBBS, MD – Dermatology (AIIMS)',
-    bio: 'Dr. Amrendra Kumar is a Consultant Dermatologist with 19 years of experience. He holds an MD in Dermatology from AIIMS and is a member of ISHRS and IADVL. He specialises in hair transplantation and vitiligo surgery.',
     tags: ['Hair Transplant', 'Trichology', 'Laser', 'Vitiligo'],
   },
   {
-    name: 'Dr. Priya Sinha',
-    role: 'Senior Dermatologist',
-    specialty: 'Cosmetic Dermatology · Anti-Aging',
-    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80',
-    qual: 'MBBS, DNB – Dermatology',
-    bio: 'Dr. Priya Sinha specialises in cosmetic and aesthetic dermatology, with a focus on anti-aging treatments, chemical peels, and laser skin rejuvenation procedures.',
-    tags: ['Botox', 'Chemical Peels', 'Skin Glow', 'Anti-Aging'],
+    name: 'Dr. Kavish Chauhan',
+    role: 'Director & Co-Founder',
+    specialty: 'Dermatologist · Hair Transplant Surgeon',
+    image: 'https://dermaclinix.in/team/img/Dr_Kavish_Chouhan.webp',
+    qual: 'MBBS, MD – Dermatology (AIIMS), MISHRS (USA)',
+    tags: ['FUE', 'Hair Transplant', 'Megasession'],
   },
   {
-    name: 'Dr. Rohit Verma',
-    role: 'Cosmetologist',
-    specialty: 'Acne · Pigmentation · Laser',
-    image: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=600&q=80',
-    qual: 'MBBS, DDVL',
-    bio: 'Dr. Rohit Verma focuses on medical dermatology including acne management, pigmentation treatment, and laser procedures. He brings precision and patient-centric care to every consultation.',
-    tags: ['Acne', 'Pigmentation', 'Laser', 'Dermatology'],
+    name: 'Dr. Neha Taneja',
+    role: 'Consultant',
+    specialty: 'Cosmetic Dermatology · Skin Treatments',
+    image: 'https://www.dermaclinix.in/images/our-team3.png',
+    qual: 'MD – Dermatology (AIIMS), New Delhi',
+    tags: ['Skin Care', 'Laser', 'Anti-Aging'],
+  },
+  {
+    name: 'Dr. Ariganesh',
+    role: 'Director – Chennai Branch',
+    specialty: 'Dermatologist · Hair Specialist',
+    image: 'https://www.dermaclinix.in/images/our-team4.png',
+    qual: 'MD – Dermatology (PGIMER)',
+    tags: ['Dermatology', 'Hair Loss', 'Trichology'],
   },
 ]
+
+const cardStyles = `
+  .team-doctor-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 0.5px solid rgba(0,0,0,0.07);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .team-doctor-card:hover {
+    transform: translateY(-5px);
+  }
+  .team-card-img-wrap {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+    background: #e8f0ee;
+  }
+  .team-card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.55s ease;
+  }
+  .team-doctor-card:hover .team-card-img-wrap img {
+    transform: scale(1.05);
+  }
+  .team-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.38) 0%, transparent 60%);
+  }
+  .team-social-row {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: all 0.3s ease;
+  }
+  .team-doctor-card:hover .team-social-row {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .team-social-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: 0.5px solid rgba(255,255,255,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+    color: white;
+    text-decoration: none;
+  }
+  .team-social-btn:hover {
+    background: #C9A96E;
+  }
+  .team-role-pill {
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #C9A96E;
+    background: rgba(201,169,110,0.1);
+    border: 0.5px solid rgba(201,169,110,0.3);
+    border-radius: 20px;
+    padding: 3px 10px;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  .team-card-divider {
+    height: 0.5px;
+    background: rgba(0,0,0,0.07);
+    margin: 10px 0;
+  }
+  .team-tag {
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: rgba(201,169,110,0.08);
+    color: #b08940;
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+`
 
 export default function Team() {
   return (
     <>
+      <style>{cardStyles}</style>
+
       <PageHero
         label="Our Team"
         title={<>Meet Our <span className="italic font-light" style={{ color: 'var(--gold)' }}>Specialists</span></>}
@@ -46,56 +149,63 @@ export default function Team() {
       {/* Team grid */}
       <section className="py-24 px-6" style={{ background: 'var(--ivory)' }}>
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          {/* Section heading */}
+          <div className="text-center mb-14">
+            <p className="section-label mb-3">Our Experts</p>
+            <h2 className="font-display text-4xl md:text-5xl" style={{ color: 'var(--obsidian)' }}>
+              Meet Our{' '}
+              <span className="italic font-light" style={{ color: 'var(--gold)' }}>Specialists</span>
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {team.map((member) => (
-              <div
-                key={member.name}
-                className="group bg-white rounded-sm overflow-hidden card-hover"
-                style={{ border: '1px solid rgba(0,0,0,0.06)' }}
-              >
+              <div key={member.name} className="team-doctor-card">
+
                 {/* Image */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="team-card-img-wrap">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    onError={(e) => {
+                      e.currentTarget.src = 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80'
+                    }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                  {/* Social icons overlay */}
-                  <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <a href="#" className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-[#C9A96E] transition-colors">
-                      <FiLinkedin size={13} />
-                    </a>
-                    <a href="#" className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-[#C9A96E] transition-colors">
-                      <FiMail size={13} />
-                    </a>
-                  </div>
+                  <div className="team-card-overlay" />
+                
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
-                  <div className="mb-4">
-                    <h3 className="font-display text-xl text-[#1A1A1A] group-hover:text-[#C9A96E] transition-colors">
-                      {member.name}
-                    </h3>
-                    <div className="text-xs tracking-widest uppercase mt-1" style={{ color: 'var(--gold)' }}>
-                      {member.role}
-                    </div>
-                    <div className="text-[#8A8A8A] text-xs mt-0.5">{member.qual}</div>
+                <div style={{ padding: '18px 20px 20px' }}>
+                  <div className="team-role-pill">{member.role}</div>
+
+                  <h3
+                    className="font-display transition-colors"
+                    style={{ fontSize: '18px', color: 'var(--obsidian)', margin: '0 0 4px', lineHeight: 1.2 }}
+                    onMouseEnter={e => e.currentTarget.style.color = '#C9A96E'}
+                    onMouseLeave={e => e.currentTarget.style.color = 'var(--obsidian)'}
+                  >
+                    {member.name}
+                  </h3>
+
+                  <div style={{ fontSize: '11px', color: '#8A8A8A', marginBottom: '4px' }}>
+                    {member.qual}
                   </div>
-                  <p className="text-[#8A8A8A] text-sm leading-relaxed mb-4">{member.bio}</p>
-                  <div className="flex flex-wrap gap-2">
+
+                  <div className="team-card-divider" />
+
+                  <div style={{ fontSize: '11px', color: '#8A8A8A', marginBottom: '10px', lineHeight: 1.5 }}>
+                    {member.specialty}
+                  </div>
+
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px' }}>
                     {member.tags.map(tag => (
-                      <span
-                        key={tag}
-                        className="text-[10px] tracking-wider px-2.5 py-1 rounded-full uppercase"
-                        style={{ background: 'rgba(201,169,110,0.1)', color: 'var(--gold-dark)' }}
-                      >
-                        {tag}
-                      </span>
+                      <span key={tag} className="team-tag">{tag}</span>
                     ))}
                   </div>
                 </div>
+
               </div>
             ))}
           </div>
@@ -114,8 +224,8 @@ export default function Team() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80',
-              'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&q=80',
+              'https://www.dermaclinix.in/images/about-clinic-banner.jpg',
+           
               'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80',
               'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80',
               'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&q=80',

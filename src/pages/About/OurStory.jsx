@@ -61,9 +61,9 @@ export default function OurStory() {
             <div className="relative">
               <div className="absolute -top-3 -right-3 w-full h-full border border-[#C9A96E]/20" />
               <img
-                src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&q=80"
+                src="https://www.dermaclinix.in/team/img/Dr._Amrendra_Kumar.webp"
                 alt="Clinic"
-                className="w-full rounded-sm relative z-10 aspect-[4/3] object-cover"
+                className="w-full rounded-sm relative z-10 object-contain"
               />
             </div>
           </div>

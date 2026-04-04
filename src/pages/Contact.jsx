@@ -13,7 +13,7 @@ const info = [
   {
     icon: FiPhone,
     label: 'Phone',
-    value: '+91 12345 67890',
+    value: '+91 8882227080',
     sub: 'Available during clinic hours',
     href: 'tel:+911234567890',
   },
