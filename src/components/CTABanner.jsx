@@ -57,7 +57,7 @@ export default function CTABanner() {
               <a href="tel:+911234567890" className="btn-gold-solid flex items-center gap-2">
                 <FiPhone size={14} /> Call Now
               </a>
-              <Link to="/contact" className="btn-gold flex items-center gap-2">
+              <Link to="https://www.practo.com/delhi/doctor/dr-amrendra-kumar-dermatologist-cosmetologist/info?practice_id=1029827&specialization=Dermatologist&referrer=doctor_listing&utm_source=opd_google_dsa&utm_medium=102203724469&utm_campaign=10191299917&sem=true" className="btn-gold flex items-center gap-2">
                 <FiCalendar size={14} /> Book Online
               </Link>
             </div>

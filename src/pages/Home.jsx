@@ -5,6 +5,7 @@ import BeforeAfter from '../components/BeforeAfter'
 import Testimonials from '../components/Testimonials'
 import DoctorSection from '../components/DoctorSection'
 import CTABanner from '../components/CTABanner'
+import LocationMap from "../components/Locationmap";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <BeforeAfter />
       <Testimonials />
       <CTABanner />
+      <LocationMap />
     </>
   )
 }

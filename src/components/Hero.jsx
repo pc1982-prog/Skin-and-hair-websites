@@ -105,7 +105,7 @@ export default function Hero() {
 
           {/* CTAs */}
           <div ref={ctaRef} className="flex flex-wrap items-center justify-center gap-4 opacity-0">
-            <Link to="/contact" className="btn-gold-solid">
+            <Link to="https://www.practo.com/delhi/doctor/dr-amrendra-kumar-dermatologist-cosmetologist/info?practice_id=1029827&specialization=Dermatologist&referrer=doctor_listing&utm_source=opd_google_dsa&utm_medium=102203724469&utm_campaign=10191299917&sem=true" className="btn-gold-solid">
               Book Consultation <FiArrowRight size={14} />
             </Link>
             <Link to="/hair" className="btn-gold">

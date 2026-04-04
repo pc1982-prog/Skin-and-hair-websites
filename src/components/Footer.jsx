@@ -1,6 +1,6 @@
 import React from "react";
 import  { Link } from 'react-router-dom'
-import { FiPhone, FiMail, FiMapPin, FiInstagram, FiFacebook, FiYoutube } from 'react-icons/fi'
+import { FiPhone, FiMail, FiMapPin, FiInstagram, FiFacebook, FiYoutube, FiLinkedin, FiTwitter } from 'react-icons/fi'
 import { FaWhatsapp } from 'react-icons/fa'
 
 const quickLinks = [
@@ -44,10 +44,10 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               {[
-                { icon: FiInstagram, href: '#', label: 'Instagram' },
-                { icon: FiFacebook, href: '#', label: 'Facebook' },
-                { icon: FaWhatsapp, href: '#', label: 'WhatsApp' },
-                { icon: FiYoutube, href: '#', label: 'YouTube' },
+                { icon: FiTwitter, href: 'https://twitter.com/Practo', label: 'Twitter' },
+                { icon: FiFacebook, href: 'https://www.facebook.com/practo', label: 'Facebook' },
+                { icon: FiLinkedin, href: 'https://www.linkedin.com/company/practo-technologies-pvt-ltd', label: 'Linkedin' },
+                { icon: FiYoutube, href: 'https://www.youtube.com/user/PractoSupport', label: 'YouTube' },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
@@ -128,19 +128,6 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Map preview */}
-            <div className="rounded-sm overflow-hidden border border-white/10" style={{ height: '120px' }}>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.3!2d77.2390!3d28.5750!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1f0b1b1b1b1%3A0x1b1b1b1b1b1b1b1b!2sDefence%20Colony%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1234567890"
-                width="100%"
-                height="120"
-                style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg)' }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Dermaclinix Location"
-              />
-            </div>
             <div className="mt-2 text-white/30 text-xs">
               Tue, Thu–Sun: 11:00 AM – 7:00 PM
             </div>
@@ -150,7 +137,16 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-white/30 text-xs tracking-wide">
-            © {new Date().getFullYear()} Dermaclinix. All Rights Reserved. Dr. Amrendra Kumar.
+            © {new Date().getFullYear()} Dermaclinix. All Rights Reserved. Built by{' '}
+            <a
+              href="https://www.strategixworks.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#C9A96E] transition-colors duration-200"
+              style={{ color: 'var(--gold)', opacity: 0.7 }}
+            >
+              Strategix
+            </a>
           </div>
           <div className="text-white/20 text-xs">
             Reg. No. 54168 Delhi Medical Council, 2011

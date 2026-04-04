@@ -3,6 +3,13 @@ import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { FiArrowRight } from 'react-icons/fi'
+import one from "../images/Gemini_Generated_Image_nl1338nl1338nl13 (1).png"
+import two from "../images/Gemini_Generated_Image_nl1338nl1338nl13 (2).png"
+import three from "../images/Gemini_Generated_Image_nl1338nl1338nl13 (3).png"
+import four from "../images/Gemini_Generated_Image_nl1338nl1338nl13 (4).png"
+import five from "../images/Gemini_Generated_Image_nl1338nl1338nl13 (5).png"
+import six from "../images/Gemini_Generated_Image_nl1338nl1338nl13.png"
+
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -11,7 +18,7 @@ const services = [
     category: 'Hair',
     title: 'Hair Transplant Surgery',
     desc: 'Advanced FUE & FUT techniques for natural, permanent hair restoration by an ISHRS member surgeon.',
-    image: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80',
+    image: six,
     link: '/hair',
     tag: 'Most Popular'
   },
@@ -19,21 +26,21 @@ const services = [
     category: 'Hair',
     title: 'Hair Loss Treatment',
     desc: 'Comprehensive trichology solutions including PRP therapy, mesotherapy & medicated treatments.',
-    image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80',
+    image: one,
     link: '/hair',
   },
   {
     category: 'Skin',
     title: 'Laser Skin Resurfacing',
     desc: 'State-of-the-art laser technology for skin rejuvenation, scar removal & tone correction.',
-    image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80',
+    image: two,
     link: '/skin',
   },
   {
     category: 'Skin',
     title: 'Anti-Aging Treatments',
     desc: 'Botox, chemical peels, dermal fillers and advanced therapies to restore youthful, radiant skin.',
-    image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80',
+    image: four,
     link: '/skin',
     tag: 'Premium'
   },
@@ -41,14 +48,14 @@ const services = [
     category: 'Skin',
     title: 'Acne & Scar Treatment',
     desc: 'Comprehensive acne management and advanced scar revision for clear, confident skin.',
-    image: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80',
+    image:"https://cutis.com.au/wp-content/uploads/2022/06/Acne-scars-treatment-cutis-dermatology-brisbane-7.webp",
     link: '/skin',
   },
   {
     category: 'Hair',
     title: 'Vitiligo Treatment',
     desc: 'Specialized medical vitiligo treatment and surgical options for skin repigmentation.',
-    image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=800&q=80',
+    image: five,
     link: '/skin',
   },
 ]

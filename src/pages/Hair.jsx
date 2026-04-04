@@ -7,6 +7,8 @@ import BeforeAfter from '../components/BeforeAfter'
 import FAQAccordion from '../components/FAQAccordion'
 import CTABanner from '../components/CTABanner'
 import { FiCheckCircle, FiArrowRight } from 'react-icons/fi'
+import one from "../images/Gemini_Generated_Image_nl1338nl1338nl13.png"
+import LocationMap from '../components/Locationmap'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -14,25 +16,25 @@ const procedures = [
   {
     title: 'FUE Hair Transplant',
     desc: 'Follicular Unit Extraction — the gold standard in hair transplantation. Individual follicles are harvested from the donor area and implanted with precision. Minimal scarring, natural results.',
-    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=700&q=80',
+    image: one,
     points: ['Permanent results', 'No linear scar', 'Quick recovery (5–7 days)', 'Natural hairline design'],
   },
   {
     title: 'FUT Strip Method',
     desc: 'Follicular Unit Transplantation — a strip of donor hair is harvested and dissected into individual grafts. Ideal for patients requiring a higher number of grafts in a single session.',
-    image: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=700&q=80',
+    image: 'https://nowigs.com.au/wp-content/uploads/2024/03/FUT-Strip-Hair-Transplant-IN.jpg',
     points: ['Maximum graft count', 'High success rate', 'Proven technique', 'Cost-effective'],
   },
   {
     title: 'PRP Hair Therapy',
     desc: 'Platelet-Rich Plasma therapy uses your own blood\'s growth factors to stimulate dormant hair follicles, significantly reducing hair fall and promoting natural regrowth.',
-    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=700&q=80',
+    image: 'https://www.cliniquerevolution.com/wp-content/uploads/2019/03/prp-for-hair.jpg',
     points: ['Non-surgical', 'Natural growth factors', '3–6 sessions protocol', 'Zero downtime'],
   },
   {
     title: 'Mesotherapy for Hair',
     desc: 'Micro-injections of vitamins, minerals, and amino acids directly into the scalp to nourish hair follicles, improve circulation, and combat hair loss.',
-    image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=700&q=80',
+    image: 'https://www.indiaplasticsurgery.com/wp-content/uploads/2025/04/21a699b06710cb97a571b29a3c19242b.jpg',
     points: ['Targets root cause', 'Improves scalp health', 'Visible results in 4–6 weeks', 'Minimal discomfort'],
   },
 ]
@@ -150,9 +152,9 @@ export default function Hair() {
       </section>
 
       {/* Benefits */}
-      <section className="py-24 px-6" style={{ background: 'var(--charcoal)' }}>
-        <div className="max-w-5xl mx-auto" ref={benefitsRef}>
-          <div className="grid md:grid-cols-2 gap-16 items-center opacity-0">
+      <section className="py-24 px-6" style={{ background: 'var(--charcoal)' }} >
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16 items-center opacity-0" ref={benefitsRef}>
             <div>
               <p className="section-label mb-4">Why Choose Us for Hair</p>
               <h2 className="font-display text-4xl md:text-5xl text-white mb-8">
@@ -171,7 +173,7 @@ export default function Hair() {
             <div className="relative">
               <div className="absolute -top-3 -left-3 w-full h-full border border-[#C9A96E]/20" />
               <img
-                src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=700&q=80"
+                src="https://www.hairmdindia.com/wp-content/uploads/2025/07/FUE-Hair-Transplant.webp"
                 alt="Hair results"
                 className="w-full rounded-sm relative z-10 aspect-[4/3] object-cover"
               />
@@ -197,7 +199,9 @@ export default function Hair() {
         </div>
       </section>
 
+
       <CTABanner />
+      <LocationMap/>
     </>
   )
 }

@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import PageHero from '../components/PageHero'
 import { FiPhone, FiMail, FiMapPin, FiClock, FiSend, FiCheckCircle } from 'react-icons/fi'
+import LocationMap from '../components/Locationmap'
 
 const info = [
   {
@@ -159,7 +160,7 @@ export default function Contact() {
 
             {/* Right — info + map */}
             <div>
-              <p className="section-label mb-4">Find Us</p>
+           
               <h2 className="font-display text-4xl text-[#1A1A1A] mb-8">
                 Visit<br />
                 <span className="italic font-light text-gold-gradient">Dermaclinix</span>
@@ -191,31 +192,11 @@ export default function Contact() {
                 })}
               </div>
 
-              {/* Google Map */}
-              <div className="rounded-sm overflow-hidden border border-black/10 shadow-sm" style={{ height: '300px' }}>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.3!2d77.2390!3d28.5750!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM0JzMwLjAiTiA3N8KwMTQnMjAuNCJF!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin"
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Dermaclinix on Map"
-                />
-              </div>
-
-              <a
-                href="https://maps.google.com/?q=Defence+Colony+Delhi"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 mt-3 text-[#C9A96E] text-xs tracking-widest uppercase font-medium"
-              >
-                <FiMapPin size={11} /> Open in Google Maps
-              </a>
+            
             </div>
           </div>
         </div>
+        <LocationMap/>
       </section>
     </>
   )

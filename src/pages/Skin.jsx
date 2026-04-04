@@ -6,6 +6,9 @@ import PageHero from '../components/PageHero'
 import FAQAccordion from '../components/FAQAccordion'
 import CTABanner from '../components/CTABanner'
 import { FiArrowRight } from 'react-icons/fi'
+import two from "../images/Gemini_Generated_Image_nl1338nl1338nl13 (2).png"
+import BeforeAfter from '../components/BeforeAfter'
+import LocationMap from '../components/Locationmap'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -13,7 +16,7 @@ const treatments = [
   {
     title: 'Laser Skin Resurfacing',
     desc: 'Fractional CO₂ laser technology precisely removes damaged skin layers, stimulating collagen production for dramatically smoother, younger-looking skin.',
-    image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=700&q=80',
+    image: two,
     tags: ['Anti-Aging', 'Scar Removal', 'Skin Tone'],
     popular: true,
   },
@@ -26,32 +29,32 @@ const treatments = [
   {
     title: 'Botox & Fillers',
     desc: 'FDA-approved Botulinum toxin and dermal filler treatments to smooth fine lines, restore facial volume, and achieve a naturally refreshed appearance.',
-    image: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=700&q=80',
+    image: 'https://miamicenterfordermatology.com/wp-content/uploads/2022/05/botox-and-fillers-2.jpg',
     tags: ['Anti-Aging', 'Volume', 'Wrinkles'],
     popular: true,
   },
   {
     title: 'Acne & Pimple Treatment',
     desc: 'Comprehensive acne management combining topical therapies, oral medication, chemical peels, and laser treatments for clear, breakout-free skin.',
-    image: 'https://images.unsplash.com/photo-1620756236308-65c3ef5d25f3?w=700&q=80',
+    image: 'https://clinicnextface.com/wp-content/uploads/2023/10/plazmennoe.jpg',
     tags: ['Acne', 'Oily Skin', 'Scars'],
   },
   {
     title: 'Microdermabrasion',
     desc: 'A gentle exfoliation treatment that uses fine crystals to remove the outermost skin layer, improving texture, tone, and the appearance of fine lines.',
-    image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=700&q=80',
+    image: 'https://media.istockphoto.com/id/1378165141/photo/cosmetologists-hand-is-making-cavitation-rejuvenation-skin-treatment-facial-treatment-facial.jpg?s=612x612&w=0&k=20&c=mjVYdKRT2HH0mEUcBHxey9eoHLZV_CJG1ncgvmf0mhI=',
     tags: ['Exfoliation', 'Skin Texture', 'Brightening'],
   },
   {
     title: 'Photofacial (IPL)',
     desc: 'Intense Pulsed Light therapy targets sun damage, redness, age spots, and uneven skin tone, revealing a clearer and more even complexion.',
-    image: 'https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?w=700&q=80',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHQMG8IUeBsUodmSP4FhWeZ6vjuURNS58b_g&s',
     tags: ['Sun Damage', 'Even Tone', 'Redness'],
   },
   {
     title: 'Stretch Mark Treatment',
     desc: 'A combination of microneedling, radiofrequency, and laser treatments to visibly reduce the appearance of stretch marks and improve skin texture.',
-    image: 'https://images.unsplash.com/photo-1556228852-80b6e5eeff06?w=700&q=80',
+    image: 'https://www.pulselightclinic.co.uk/wp-content/uploads/2024/07/stomach-500x280.jpg',
     tags: ['Body Skin', 'Collagen', 'Texture'],
   },
   {
@@ -168,7 +171,7 @@ export default function Skin() {
       </section>
 
       {/* Before/After for skin */}
-      <section className="py-24 px-6" style={{ background: 'var(--obsidian)' }}>
+      {/* <section className="py-24 px-6" style={{ background: 'var(--obsidian)' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <p className="section-label mb-3">Real Results</p>
@@ -204,7 +207,8 @@ export default function Skin() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+      <BeforeAfter/>
 
       {/* FAQ */}
       <section className="py-24 px-6" style={{ background: 'var(--cream)' }}>
@@ -221,6 +225,7 @@ export default function Skin() {
       </section>
 
       <CTABanner />
+      <LocationMap/>
     </>
   )
 }
